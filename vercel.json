@@ -1,3 +1,16 @@
 {
-  "buildCommand": "npm run build"
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/mcp/route.ts",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/mcp",
+      "methods": ["POST","GET","OPTIONS"],
+      "dest": "api/mcp/route.ts"
+    }
+  ]
 }
