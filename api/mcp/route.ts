@@ -179,4 +179,4 @@ const handler = createMcpHandler((server) => {
   );
 });
 
-export default handler;
+export { handler as GET, handler as POST };
